@@ -13,8 +13,11 @@ import android.widget.LinearLayout
  * loop of calling each other's TextWatcher.
  *
  * "Eth" comes from the chemical prefix of organics, are used to mean there are two carbons.
+ *
+ * @param context
+ * @param editText0 The first EditText.
+ * @param editText1 The second EditText.
  */
-
 class EthTextView(context: Context, val editText0: EditText, val editText1: EditText): LinearLayout(context)
 {
     /**
@@ -22,12 +25,19 @@ class EthTextView(context: Context, val editText0: EditText, val editText1: Edit
      */
     private val status = arrayOf(false, false)
 
+    /**
+     * Relation definition of two EditText.
+     */
     var relation: EthTextView.OnEditTextChangedListener = object : OnEditTextChangedListener
     {
         override fun onEditText0Changed(editText0: EditText, editText1: EditText) {}
         override fun onEditText1Changed(editText0: EditText, editText1: EditText) {}
     }
 
+    /**
+     * Define the two EditText with some default.
+     * @param context
+     */
     constructor(context: Context): this(context, EditText(context), EditText(context))
     {
         orientation = LinearLayout.VERTICAL
@@ -72,6 +82,9 @@ class EthTextView(context: Context, val editText0: EditText, val editText1: Edit
         })
     }
 
+    /**
+     * Activated when the EditText has changed.
+     */
     interface OnEditTextChangedListener
     {
         fun onEditText0Changed(editText0: EditText, editText1: EditText)
