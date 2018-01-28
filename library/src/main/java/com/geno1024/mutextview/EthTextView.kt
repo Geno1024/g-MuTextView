@@ -1,4 +1,4 @@
-package com.geno.mutextview
+package com.geno1024.mutextview
 
 import android.content.Context
 import android.text.Editable
@@ -28,7 +28,7 @@ class EthTextView(context: Context, val editText0: EditText, val editText1: Edit
     /**
      * Relation definition of two EditText.
      */
-    var relation: EthTextView.OnEditTextChangedListener = object : OnEditTextChangedListener
+    var relation: OnEditTextChangedListener = object : OnEditTextChangedListener
     {
         override fun onEditText0Changed(editText0: EditText, editText1: EditText) {}
         override fun onEditText1Changed(editText0: EditText, editText1: EditText) {}

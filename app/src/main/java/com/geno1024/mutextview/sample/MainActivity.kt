@@ -1,8 +1,9 @@
-package com.geno.mutextview
+package com.geno1024.mutextview.sample
 
 import android.app.Activity
 import android.os.Bundle
 import android.widget.EditText
+import com.geno1024.mutextview.EthTextView
 
 class MainActivity : Activity()
 {

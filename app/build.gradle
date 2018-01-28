@@ -7,7 +7,7 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.geno.mutextview"
+        applicationId "com.geno1024.mutextview.sample"
         minSdkVersion 21
         targetSdkVersion 27
         versionCode 1
